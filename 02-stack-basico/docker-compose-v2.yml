@@ -2,7 +2,7 @@
 version: "3"
 services:
   web:
-    image: ostua/repopython:0.02
+    image: docker/repo:tag
     deploy:
       replicas: 5
       resources:
