@@ -2,9 +2,9 @@
 version: "3"
 services:
   web:
-    image: ostua/repopython:0.02
+    image: dockerid/repo:tag
     deploy:
-      replicas: 8
+      replicas: 5
       resources:
         limits:
           cpus: "0.1"

@@ -2,7 +2,7 @@
 version: "3"
 services:
   web:
-    image: ostua/repopython:0.02
+    image: dockerid/repo:tag
     deploy:
       replicas: 5
       resources:
@@ -31,7 +31,7 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - /home/ostua/redisdata:/data
+      - redisdata:/data
     deploy:
       placement:
         constraints: [node.role == manager]
@@ -39,5 +39,8 @@ services:
     networks:
       - webnet
 
+volumes:
+  redisdata:
+  
 networks:
   webnet:
