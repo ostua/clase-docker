@@ -1,0 +1,30 @@
+# Cuarto ejemplo
+version: "3"
+services:
+  web:
+    depends_on: 
+      - redis
+    restart: on-failure
+    environment:
+      NAME: "Enrique"
+    build: .
+    image: miappweb
+    ports:
+      - "5000:80"
+    networks:
+      - red-mi-app-web
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - "redisdata:/data"
+    networks:
+      - red-mi-app-web
+
+volumes:
+  redisdata:
+
+networks:
+  red-mi-app-web:

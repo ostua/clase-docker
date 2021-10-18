@@ -1,0 +1,13 @@
+# Segundo ejemplo
+version: "3"
+services:
+  web:
+    build: .
+    image: miappweb
+    ports:
+      - "5000:80"
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
