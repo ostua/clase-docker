@@ -1,0 +1,8 @@
+# Primer ejemplo
+services:
+  web:
+    build: .
+    image: miappweb
+    ports:
+      - "5000:80"
+
