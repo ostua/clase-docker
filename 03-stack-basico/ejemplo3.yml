@@ -1,5 +1,4 @@
 # Tercer ejemplo de stack
-version: "3"
 services:
   web:
     image: ostua/mirepo:1.1
