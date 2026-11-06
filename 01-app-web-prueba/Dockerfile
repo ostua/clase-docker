@@ -11,9 +11,5 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 EXPOSE 80
 # ENV: Define una variable de entorno
 ENV NAME World
-<<<<<<< HEAD
-=======
-EXPOSE
->>>>>>> a691800 (Actualizacion 2026)
 # CMD: Ejecuta "app.py" cuando arraquea el contenedor
 CMD ["python", "app.py"]
